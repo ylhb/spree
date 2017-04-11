@@ -1,0 +1,52 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{!-- If we have a tag cover, display that - else blog cover - else nothing --}}
+<header class="navbar-fixed">
+    <nav id="headNav" class="none-shadow">
+        <div id="navContainer" class="container">
+            <div class="nav-wrapper">
+                <div class="brand-logo">
+                    <a href="{{@blog.url}}" class="waves-effect waves-light">
+                        {{#if @blog.logo}}
+                        <img src="{{@blog.logo}}" class="logo-img hide-on-small-only">
+                        {{/if}}
+                        <span class="logo-span">{{@blog.title}}</span>
+                    </a>
+                </div>
+
+                {{! 导航菜单 }}
+                <ul class="navigation">
+                    {{#foreach @blog.navigation}}
+                    <li class="">
+                        <a href="{{url absolute="true"}}" class="waves-effect waves-light">{{label}}</a>
+                    </li>
+                    {{/foreach}}
+                </ul>
+                <a href="javascript:;" data-activates="mobile-nav" class="button-collapse" id="navDrawer"><i class="iconfont icon-menu"></i></a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+{{!-- The main content area on the homepage --}}
+<main class="content" role="main">
+
+    <div class="slogen">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <h1 class="slogen-title">Every thing about</h1>
+                    <p class="tag">「{{tag.name}}」</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parallax-container">
+        <div class="parallax"><img src="/assets/images/main.jpg"></div>
+    </div>
+
+    {{!-- The tag below includes the post loop - partials/loop.hbs --}}
+    {{> "loop"}}
+
+</main>
