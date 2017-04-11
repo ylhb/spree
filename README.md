@@ -1,0 +1,2 @@
+# spree
+ghost theme
