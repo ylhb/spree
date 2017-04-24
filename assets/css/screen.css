@@ -259,6 +259,27 @@ nav.pagination {
     transform: translateX(-50%)
 }
 
+.parallax-container{
+    background-position: center;
+    background-size: cover;
+}
+
+.parallax-container:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: background-color .5s ease-out 2s;
+    -webkit-animation-name: animate-bg;
+    -webkit-animation-duration: 20s;
+    -webkit-animation-iteration-count: infinite;
+    opacity: .25;
+    background: url(../../assets/images/escheresque_ste.png);
+    background-color: rgba(0,0,0,.05);
+}
+
 
 /*-------------POST---------------*/
 .post-title {
@@ -719,7 +740,6 @@ nav.pagination {
         max-width: 800px;
     }
 }
-
 
 .post-content img[alt=cover] {
     display: none!important
