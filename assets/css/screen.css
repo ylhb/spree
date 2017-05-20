@@ -306,7 +306,7 @@ nav.pagination {
 }
 .post-mate .tags {
     display: block;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-left: -.6rem;
 }
 
@@ -443,8 +443,16 @@ nav.pagination {
 .post-content pre code {
     line-height: 2rem;
     border: 0;
-    background: #545454;
+    font-size: 1.4rem;
 }
+.post-content em, .post-content strong {
+    font-style: italic;
+    padding: 2px 4px;
+    background-color: #f6f6f6;
+    border: none;
+    color: #f72d84;
+    white-space: pre-wrap;
+ }
 
 .read-next {
     display: -webkit-box;
@@ -558,7 +566,35 @@ nav.pagination {
     box-sizing: border-box;
     border-left: rgba(0,0,100,.04) 1px solid
 }
+div.prism-show-language {
+    position: relative
+}
 
+div.prism-show-language>div.prism-show-language-label[data-language] {
+    font-size: .9em;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 0 .5em;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+    color: #000;
+    border-radius: 0 0 0 5px;
+    background-color: #cfcfcf;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none
+}
 
 /*回到顶部按钮样式*/
 .top-scroll {
