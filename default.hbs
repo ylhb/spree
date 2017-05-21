@@ -50,24 +50,45 @@
 
     {{!-- <div class="site-wrapper"> --}}
 
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        {{{body}}}
+    {{!-- The big featured header --}}
+    <header class="navbar-fixed">
+        <nav id="headNav" class="none-shadow">
+            <div id="navContainer" class="container">
+                <div class="nav-wrapper">
+                    <div class="brand-logo">
+                        <a href="{{@blog.url}}" class="waves-effect waves-light">
+                            {{#if @blog.logo}}
+                            <img src="{{@blog.logo}}" class="logo-img hide-on-small-only">
+                            {{/if}}
+                            <span class="logo-span">{{@blog.title}}</span>
+                        </a>
+                    </div>
 
-        {{!-- The tiny footer at the very bottom --}}
-        <footer class="site-footer clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
-            <section><a href="https://github.com/ylhb/spree">Theme Spree  </a> <a href="https://github.com/ylhb/spree" class="github-repo"><span class="gadget-github"></span>Star</a> Designed by <a href="https://nitmoon.com">@NitMoon</a>
-            </section>
-            <section class="poweredby">Powered by  <a href="https://ghost.org">Ghost</a></section>
-            <section><a href="http://www.miitbeian.gov.cn/">豫ICP备17009082号</a></section>
-        </footer>
+                    {{! 导航菜单 }}
+                    {{navigation}}
+                </div>
+            </div>
+        </nav>
+    </header>
 
-        <!-- 回到顶部按钮 -->
-        <div id="backTop" class="top-scroll">
-            <a class="btn-floating btn-large waves-effect waves-light" href="#!">
-                <i class="iconfont icon-up"></i>
-            </a>
-        </div>
+    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+    {{{body}}}
+
+    {{!-- The tiny footer at the very bottom --}}
+    <footer class="site-footer clearfix">
+        <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+        <section><a href="https://github.com/ylhb/spree">Theme Spree  </a> <a href="https://github.com/ylhb/spree" class="github-repo"><span class="gadget-github"></span>Star</a> Designed by <a href="https://nitmoon.com">@NitMoon</a>
+        </section>
+        <section class="poweredby">Powered by  <a href="https://ghost.org">Ghost</a></section>
+        <section><a href="http://www.miitbeian.gov.cn/">豫ICP备17009082号</a></section>
+    </footer>
+
+    <!-- 回到顶部按钮 -->
+    <div id="backTop" class="top-scroll">
+        <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+            <i class="iconfont icon-up"></i>
+        </a>
+    </div>
 
     {{!-- </div> --}}
 

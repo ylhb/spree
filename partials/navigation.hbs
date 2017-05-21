@@ -1,0 +1,10 @@
+<ul class="navigation">
+    {{#if @blog.navigation}}
+        {{#foreach navigation}}
+        <li class="">
+            <a href="{{url absolute="true"}}" class="waves-effect waves-light">{{label}}</a>
+        </li>
+        {{/foreach}}
+    {{/if}}
+</ul>
+<a href="javascript:;" data-activates="mobile-nav" class="button-collapse" id="navDrawer"><i class="iconfont icon-menu"></i></a>
