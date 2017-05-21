@@ -622,6 +622,22 @@ div.prism-show-language>div.prism-show-language-label[data-language] {
     .container {
         width: 95%;
     }
+    .container.post {
+        padding: 0px;
+    }
+    .card .card-content, .card .card-image .card-title {
+        padding: 10px;
+    }
+    .card-title .tags {
+        display: none;
+    }
+    .slogen {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .slogen .post-title {
+        font-size: 2.4rem;
+    }
     .slogen .slogen-title {
         font-size: 3.2rem;
     }
@@ -700,6 +716,9 @@ div.prism-show-language>div.prism-show-language-label[data-language] {
 @media only screen and (min-width: 600px) and (max-width: 992px) {
     .container {
         width: 85%;
+    }
+    .slogen .post-title {
+        font-size: 3.0rem;
     }
     .slogen h1 {
         font-size: 3rem;
